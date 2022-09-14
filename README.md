@@ -10,7 +10,7 @@
 
 ### Manual commands
 ### This path assumes you have installed poetry and postgresql
-###### clone project and install poetry if u don't have it on your local machine
+###### clone project 
 
     $ git clone https://github.com/zxc322/parse_real_estate.git
 
