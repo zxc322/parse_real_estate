@@ -25,6 +25,14 @@
     'pgdb': 'real_estate'
     }
 
+###### Postgers commands
+
+    $ sudo -i -u postgres
+    $ psql  
+    $ CREATE database real_estate;
+    $ CREATE user zxc with encrypted password 'zxc';
+    $ grant all privileges on database real_estate to zxc;
+
 ###### init environment and run app
 
     $ poetry init
