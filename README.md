@@ -11,6 +11,20 @@
     $ %APPDATA%\Python\Scripts
     # details on https://python-poetry.org/docs/
 
+
+###### Create database (postgresql)
+
+###### In my case db_name=real_estate, db_user=zxc, db_pass=zxc, db_host=localhost
+###### You always can change it in parse_app/settings.py
+
+    postgresql = {
+    'pguser': 'zxc',
+    'pgpswd': 'zxc',
+    'pghost': 'localhost', # set as 'db' for docker
+    'pgport': 5432,
+    'pgdb': 'real_estate'
+    }
+
 ###### init environment and run app
 
     $ poetry init
