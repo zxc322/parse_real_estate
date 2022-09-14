@@ -4,12 +4,12 @@
 
 ### Manual commands
 
+### This path assumes you have installed poetry and postgresql
+
 ###### clone project and install poetry if u don't have it on your local machine
 
     $ git clone ...
-    $ curl -sSL https://install.python-poetry.org | python3 -
-    $ %APPDATA%\Python\Scripts
-    # details on https://python-poetry.org/docs/
+
 
 
 ###### Create database (postgresql)
