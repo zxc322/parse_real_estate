@@ -40,7 +40,7 @@
     $ CREATE user zxc with encrypted password 'zxc';
     $ grant all privileges on database real_estate to zxc;
 
-###### init environment and run app
+###### Install dependencies and run app ( Script will parse page by page untill it can find <a title=Next> in bottom-navbar)
 
     $ poetry install
     $ poetry run python parse_app/main.py
