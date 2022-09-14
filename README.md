@@ -4,16 +4,21 @@
 
 ### Manual commands
 
+### This path assumes you have installed poetry and postgresql
+
 ###### clone project and install poetry if u don't have it on your local machine
 
-    $ git clone ...
-    $ curl -sSL https://install.python-poetry.org | python3 -
-    $ %APPDATA%\Python\Scripts
-    # details on https://python-poetry.org/docs/
+    $ git clone https://github.com/zxc322/parse_real_estate.git
+
+
+###### Create user with the same name as postgeres user ( it needed to run dump_psql script)
+
+    $ sudo adduser zxc 
+    $ sudo usermod -aG sudo zxc
+    $ su zxc
 
 
 ###### Create database (postgresql)
-
 ###### In my case db_name=real_estate, db_user=zxc, db_pass=zxc, db_host=localhost
 ###### You always can change it in parse_app/settings.py
 
@@ -35,7 +40,7 @@
 
 ###### init environment and run app
 
-    $ poetry init
+    $ poetry install
     $ poetry run python parse_app/main.py
 
 ###### After finish script will create dump.gz file localy and send it to tg_canel
