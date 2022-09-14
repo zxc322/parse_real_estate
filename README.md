@@ -1,3 +1,9 @@
+# How it works
+
+### Script will parse page by page untill it can find ```<a title=Next>``` in bottom-navbar
+### After last page data from postgers will dumped in dump.gz , save lical file and send it to [telegram data storage chanel](https://t.me/storage_psql_dumps)
+
+
 # HOW TO USE APP
 
 ### There are 2 ways (with docker and manual)
@@ -41,7 +47,7 @@
     $ grant all privileges on database real_estate to zxc;
 
 ###### Install dependencies and run app
-###### Script will parse page by page untill it can find ```<a title=Next>``` in bottom-navbar
+
 
     $ poetry install
     $ poetry run python parse_app/main.py
