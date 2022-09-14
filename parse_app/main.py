@@ -3,11 +3,8 @@ import time
 import os
 
 from pull_data import get_html, get_content, lookup_next
-from settings import headers, bot_token, chat_id, chanel
+from settings import headers, bot_token, chat_id, chanel, USE_DOCKER
 from telegram_send import send_dump_to_telegram
-
-print('[INFO] Waiting for docker db, sleeping 5s...')
-time.sleep(5)
 
 
 def main(headers):
@@ -18,22 +15,28 @@ def main(headers):
         html = get_html(url, headers)
         soup = BS(html.text, 'html.parser')
         get_content(soup)
-        #if not lookup_next(soup):
-        if page > 4:
-            os.system("sh make_dump.sh")
-            print(f'[INFO] Sending dump file to telegram chanel {chanel}')
-            time.sleep(5)
-            
-            send_dump_to_telegram(bot_token, chat_id, 'dump.real_estate.gz')
-            print('[INFO] Done!')        
 
-            break
+        if not lookup_next(soup):
+            if USE_DOCKER:
+                print('[INFO] Done!')
+                print('[INFO] You can dump data by runing \n'
+                '"docker exec postgres_db pg_dump -U zxc -F t real_estate | gzip > docker_real_estate.gz"')
+
+                break
+            else:
+                os.system("sh make_dump.sh")                
+                print(f'[INFO] Sending dump file to telegram chanel {chanel}')
+                time.sleep(2)               
+                send_dump_to_telegram(bot_token, chat_id, 'docker_real_estate.gz')
+                print('[INFO] Done!')        
+                break
         page += 1
         print(f'[INFO] Loading page={page}...')
         time.sleep(5)
 
 
-main(headers)
+if __name__=='__main__':
+    main(headers)
 
 
 

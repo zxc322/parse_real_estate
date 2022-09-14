@@ -5,7 +5,8 @@ echo "Dumping postgresql data!"
 
 pg_dump real_estate | gzip > dump.real_estate.gz
 
-# for resore run
+
+# for restore you can run
 # gunzip dump.real_estate.gz
 # psql db < dump
 

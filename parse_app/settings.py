@@ -1,10 +1,23 @@
-postgresql = {
-    'pguser': 'zxc',
-    'pgpswd': 'zxc',
-    'pghost': 'db', #  set to 'db' if run with docker and to 'localhost' if w\o
-    'pgport': 5432,
-    'pgdb': 'real_estate'
-}
+USE_DOCKER = True
+
+if USE_DOCKER:
+    postgresql = {
+        'pguser': 'zxc',
+        'pgpswd': 'zxc',
+        'pghost': 'db',   
+        'pgport': 5432,
+        'pgdb': 'real_estate'
+    }
+else:
+    postgresql = {
+        'pguser': 'zxc',
+        'pgpswd': 'zxc',
+        'pghost': 'localhost',   
+        'pgport': 5432,
+        'pgdb': 'real_estate'
+    }
+
+
 
 headers = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
