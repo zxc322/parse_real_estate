@@ -1,11 +1,9 @@
 # HOW TO USE APP
 
-### There re 2 ways (with docker and manual)
+### There are 2 ways (with docker and manual)
 
 ### Manual commands
-
 ### This path assumes you have installed poetry and postgresql
-
 ###### clone project and install poetry if u don't have it on your local machine
 
     $ git clone https://github.com/zxc322/parse_real_estate.git
