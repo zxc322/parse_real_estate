@@ -2,9 +2,16 @@ from bs4 import BeautifulSoup as BS
 import time
 import os
 
-from pull_data import get_html, get_content, lookup_next
 from settings import headers, bot_token, chat_id, chanel, USE_DOCKER
+
+if USE_DOCKER:
+    print('[INFO] Waiting for db creating...')
+    time.sleep(5
+    )
+from pull_data import get_html, get_content, lookup_next
 from telegram_send import send_dump_to_telegram
+
+
 
 
 def main(headers):
