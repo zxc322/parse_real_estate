@@ -17,6 +17,8 @@
 
 ###### Change const 'USE_DOCKER' to 'False' in parse_app/settings.py ( Default=True)
 
+    USE_DOCKER = False
+
 
 ###### Create database (postgresql)
 ###### In my case db_name=real_estate, db_user=zxc, db_pass=zxc, db_host=localhost
