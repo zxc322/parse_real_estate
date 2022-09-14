@@ -1,7 +1,7 @@
 # How it works
 
 ### Script will parse page by page untill it can find ```<a title=Next>``` in bottom-navbar
-### After last page data from postgers will dumped in dump.gz , save lical file and send it to [telegram data storage chanel](https://t.me/storage_psql_dumps)
+### After last page done data from postgers DB will be dumped in the dump.gz file, saved in app directory and sended it to [telegram data storage chanel](https://t.me/storage_psql_dumps)
 
 
 # HOW TO USE APP
