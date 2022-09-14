@@ -1,7 +1,7 @@
 postgresql = {
     'pguser': 'zxc',
     'pgpswd': 'zxc',
-    'pghost': 'localhost', #  set to 'db' if run with docker and to 'localhost' if w\o
+    'pghost': 'db', #  set to 'db' if run with docker and to 'localhost' if w\o
     'pgport': 5432,
     'pgdb': 'real_estate'
 }
