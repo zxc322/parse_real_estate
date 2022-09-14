@@ -48,3 +48,22 @@
 
 
 ### Docker commands
+### This path assumes you have installed docker and docker-compose
+
+
+###### clone project and install poetry if u don't have it on your local machine
+
+    $ git clone https://github.com/zxc322/parse_real_estate.git
+    
+###### From directory wirh 'docker-compose.yml' run:
+
+    $ docker-compose up --build
+    
+###### This command will start pulling data from source.It taked about 10 minutes. If u run w\o -d prefix logs let you know when process is done
+###### When its done you can dump postgers data from docker (but container with db must be runing)
+
+    # dump data
+    $ docker exec postgres_db pg_dump -U zxc -F t real_estate | gzip > docker_real_estate.gz
+    # send dump.gz to telegram chanel
+    $ python send_dump_to_telegram.py
+
