@@ -35,7 +35,7 @@
 
 ###### init environment and run app
 
-    $ poetry init
+    $ poetry install
     $ poetry run python parse_app/main.py
 
 ###### After finish script will create dump.gz file localy and send it to tg_canel
