@@ -41,7 +41,7 @@
     $ grant all privileges on database real_estate to zxc;
 
 ###### Install dependencies and run app
-###### Script will parse page by page untill it can find ```HTML<a title=Next>``` in bottom-navbar
+###### Script will parse page by page untill it can find ```<a title=Next>``` in bottom-navbar
 
     $ poetry install
     $ poetry run python parse_app/main.py
