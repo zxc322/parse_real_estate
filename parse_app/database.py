@@ -61,4 +61,8 @@ def insert_data_into_db(data):
     ))
 
 
+# print db content
+# res = conn.execute(real_estate.select())
 
+# for r in res:
+#     print(r)

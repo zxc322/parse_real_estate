@@ -44,7 +44,10 @@ def get_price(info_box):
     full_price = info_box.find('div', class_='price').get_text(strip=True)
     if full_price[0].isalpha():        
         return (None, full_price)
-    currency = full_price[0]
+    if full_price[0] == '$':
+        currency = 'CAD'
+    else:
+        currency = full_price[0]
     price = full_price[1:]
     return (currency, price)
     

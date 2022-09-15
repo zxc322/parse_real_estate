@@ -33,7 +33,7 @@ def main(headers):
                 os.system("sh make_dump.sh")                
                 print(f'[INFO] Sending dump file to telegram chanel {chanel}')
                 time.sleep(2)               
-                send_dump_to_telegram(bot_token, chat_id, 'docker_real_estate.gz')
+                send_dump_to_telegram(bot_token, chat_id, 'dump.real_estate.gz')
                 print('[INFO] Done!')        
                 break
         page += 1
